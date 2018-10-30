@@ -1,0 +1,27 @@
+{
+  "name": "shri2018-2-performance-original",
+  "version": "1.0.0",
+  "description": "Оптимизируйте страницу, выложите на GitHub Pages. Зайдите на https://shri-performance.ru и отправьте урл своей страницы.",
+  "main": "banner.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build --no-source-maps ./src/index.html",
+    "server": "http-server ./dist",
+    "start": "npm run build && npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newbfg/shri2018-2-performance.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newbfg/shri2018-2-performance/issues"
+  },
+  "homepage": "https://github.com/newbfg/shri2018-2-performance#readme",
+  "devDependencies": {
+    "cssnano": "^4.1.7",
+    "parcel-plugin-imagemin": "^2.1.1"
+  }
+}
