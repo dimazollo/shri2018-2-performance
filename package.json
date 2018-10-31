@@ -5,8 +5,10 @@
   "main": "banner.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build --no-source-maps ./src/index.html",
-    "server": "http-server ./dist",
+    "clean": "rimraf ./docs",
+    "build": "parcel build --no-source-maps --out-dir ./docs --public-url ./ ./src/index.html",
+    "build:clean": "npm run clean && npm run build",
+    "server": "http-server ./docs",
     "start": "npm run build && npm run server"
   },
   "repository": {
@@ -21,7 +23,10 @@
   },
   "homepage": "https://github.com/newbfg/shri2018-2-performance#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.2",
     "cssnano": "^4.1.7",
-    "parcel-plugin-imagemin": "^2.1.1"
+    "parcel-plugin-compress": "^1.0.6",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.23.1"
   }
 }
